@@ -1,28 +1,18 @@
 <ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
-  </ion-content>
+    <ion-content>
+        <ion-pane>
+            <ion-header-bar class="bar-stable">
+                <h1 class="title">Test</h1>
+            </ion-header-bar>
+            <ion-content padding="true" has-header="true">
+                <div class="text-center padding">
+                    <button ng-disabled="registerDisabled" class="button button-bar-inline button-balanced" ng-click="register()">Register</button>
+                    <button ng-disabled="!registerDisabled" class="button button-bar-inline button-balanced" ng-click="unregister()">Unregister</button>
+                </div>
+                <p>Device Token</p>
+                <textarea readonly>{{regId}}</textarea>
+            </ion-content>
+        </ion-pane>
+    </ion-content>
+           
 </ion-view>

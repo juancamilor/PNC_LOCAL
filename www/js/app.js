@@ -10,50 +10,52 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
       
-      /*
-      var push = new Ionic.Push({
-          "debug": true
-      });
+      
+      //var push = new Ionic.Push({
+      //    "debug": true
+      //});
 
-      push.register(function (token) {
-          console.log("Device token:", token.token);
-      });
-      */
-      var io = Ionic.io();
-      var push = new Ionic.Push({
-          "onNotification": function (notification) {
-              alert('Notification-title : ' + notification.title + '- body:' + notification.body);
-          },
-          "pluginConfig": {
-              "android": {
-                  "iconColor": "#0000FF"
-              }
-          }
-      });
-      var user = Ionic.User.current();
+      //push.register(function (token) {
+      //    console.log("Device token:", token.token);
+      //});
+      
+      //var io = Ionic.io();
+      //var push = new Ionic.Push({
+      //    "onNotification": function (notification) {
+      //        alert('Notification-title : ' + notification.title + '- body:' + notification.body);
+      //    },
+      //    "pluginConfig": {
+      //        "android": {
+      //            "iconColor": "#0000FF"
+      //        }
+      //    }
+      //});
+      //var user = Ionic.User.current();
 
-      //if (!user.id) {
-          user.id = Ionic.User.anonymousId();
-      //}
+      ////if (!user.id) {
+      //user.id = Ionic.User.anonymousId();
+      //console.log('user id:' + user.id);
+      ////}
 
-      // Just add some dummy data..
-      user.set('name', 'Camilo Ramirez');
-      user.set('bio', 'Software dev');
-      user.save();
+      //// Just add some dummy data..
+      //user.set('name', 'Camilo Ramirez');
+      //user.set('bio', 'Software dev');
+      //user.save();
 
-      var callback = function (data) {
-          try {
-              console.log(data);
-              console.log('GCM registration token:' + data.token);
-          }
-          catch (err) {
-              console.log('err in callback');
-              console.log('err in callback:' + err);
-          }
-          push.addTokenToUser(user);
-          user.save();
-      };
-      push.register(callback);
+      //var callback = function (data) {
+      //    try {
+      //        console.log(data);
+      //        console.log('GCM registration token:' + data.token);
+      //        alert(data.token);
+      //    }
+      //    catch (err) {
+      //        console.log('err in callback');
+      //        console.log('err in callback:' + err);
+      //    }
+      //    push.addTokenToUser(user);
+      //    user.save();
+      //};
+      //push.register(callback);
 
       
 
